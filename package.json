@@ -1,18 +1,28 @@
 {
-  "name": "apply-transform-functions",
+  "name": "composable-transform-functions",
   "version": "1.0.0",
-  "description": "Applies transform functions to a value",
-  "main": "index.ts",
+  "description": "Allows you to compose a set of functions to be applied to a value in order to transform or validate it",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "npx tsc test"
+    "test": "ts-mocha -p tsconfig.json test/**/*.spec.ts",
+    "build": "npm run test && rm -rd ./lib && tsc",
+		"prepublish": "npm run build"
   },
   "keywords": [
+		"composable",
     "transform",
     "functions"
   ],
   "author": "Donny Swany",
   "license": "MIT",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chai": "^4.3.0",
+    "@types/expect": "^24.3.0",
+    "@types/mocha": "^9.1.0",
+    "chai": "^4.3.6",
+    "mocha": "^9.2.0",
+    "ts-mocha": "^9.0.2",
     "typescript": "^4.5.5"
   }
 }
