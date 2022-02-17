@@ -1,15 +1,15 @@
 {
-  "name": "composable-transform-functions",
+  "name": "@doneee/composable-transform-functions",
   "version": "1.0.0",
   "description": " Allows you to compose a list of functions to apply to a value, in order to transform or validate it.",
   "main": "lib/index.js",
   "scripts": {
     "test": "ts-mocha -p tsconfig.json test/**/*.spec.ts",
     "build": "npm run test && rm -rd ./lib && tsc",
-		"prepublish": "npm run build"
+    "prepublish": "npm run build"
   },
   "keywords": [
-		"composable",
+    "composable",
     "transform",
     "functions"
   ],
@@ -24,5 +24,17 @@
     "mocha": "^9.2.0",
     "ts-mocha": "^9.0.2",
     "typescript": "^4.5.5"
-  }
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doneee/composable-transform-functions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/doneee/composable-transform-functions/issues"
+  },
+  "homepage": "https://github.com/doneee/composable-transform-functions#readme"
 }
